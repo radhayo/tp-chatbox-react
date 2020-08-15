@@ -18,7 +18,7 @@ class App extends Component {
     return (
       <div className='box' >
         <div>
-          <div className='message'>
+          <div className='message'> 
             <Message/>
             <Message/>
             <Message/>
@@ -26,6 +26,7 @@ class App extends Component {
         </div>
       </div>
       <Formulaire 
+      length ={140}
       pseudo = {this.state.pseudo}
       addMessage = {this.addMessage} />
       </div>
