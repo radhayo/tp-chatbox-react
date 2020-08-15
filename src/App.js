@@ -3,11 +3,22 @@ import './App.css'
 import Formulaire from './components/Formulaire'
 import Message from './components/Message'
 
+// firebase 
+import base from './base'
+
+
 class App extends Component {
   state= {
-    messages:{},
+    messages: {},
     pseudo: this.props.match.params.pseudo
   }
+  componentDidMount(){
+    base.syncState('/', {
+      context: this,
+      state: 'messages'
+    })
+  }
+
   addMessage = message => {
     const messages =  {...this.state.messages}
     messages[`message-${Date.now()}`] = message
