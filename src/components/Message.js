@@ -1,11 +1,11 @@
 import React from 'react';
 
 const Message = ({ pseudo , message , isUser }) => {
-if (isUser(pseudo)) {
-    return (
-       <p className='user-message'>
-           {message}
-       </p>
+    if (isUser(pseudo)) {
+        return (
+            <p className='user-message'>
+                {message}
+            </p>
     )
 } else {
     return (
@@ -16,4 +16,4 @@ if (isUser(pseudo)) {
     }
 }
 
-export default Message;
+export default Message
